@@ -1,0 +1,33 @@
+<!-- list_transactions.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List Transactions</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    {% include 'header.html' %}
+    <h1>List Transactions</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Member Name</th>
+                <th>Book Title</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+            <tr>
+                <td>{{ transaction[0] }}</td>
+                <td>{{ transaction[1] }}</td>
+                <td>{{ transaction[2] }}</td>
+                <td>{{ transaction[3] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

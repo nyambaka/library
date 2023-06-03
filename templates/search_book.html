@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Book</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    {% include 'header.html' %}
+    <h1>Search Book</h1>
+
+    <form method="POST" action="{{ url_for('search_book') }}">
+        <label for="search_query">Search Query:</label>
+        <input type="text" id="search_query" name="search_query" required><br>
+
+        <input type="submit" value="Search">
+    </form>
+
+    <h2>Search Results</h2>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Stock</th>
+        </tr>
+        {% for book in search_results %}
+        <tr>
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.stock }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="{{ url_for('home') }}">Back to Home</a>
+</body>
+</html>

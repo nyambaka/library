@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Member</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    {% include 'header.html' %}
+    <h1>Add Member</h1>
+
+    <form method="POST" action="{{ url_for('add_member') }}">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <input type="submit" value="Add Member">
+    </form>
+    
+    <a href="{{ url_for('list_members') }}">Back to Member List</a>
+    {% include 'footer.html' %}
+</body>
+</html>

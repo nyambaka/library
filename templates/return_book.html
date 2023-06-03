@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Return Book</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    {% include 'header.html' %}
+    <h1>Return Book</h1>
+    <form method="post" action="{{ url_for('return_book') }}">
+        <label for="transaction_id">Transaction:</label>
+        <select id="transaction_id" name="transaction_id" required>
+            {% for transaction in transactions %}
+                <option value="{{ transaction[0] }}">{{ transaction[1] }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Return</button>
+    </form>
+</body>
+</html>
