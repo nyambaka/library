@@ -1,5 +1,5 @@
 # Base Library System
-![Screenshot 1](sample 1.png)
+![Screenshot 1](sample1.png)
 
 
 Base Library System is a web application built with Flask that allows librarians to manage books, members, and transactions in a library setting.
