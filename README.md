@@ -1,7 +1,4 @@
 # Base Library System
-![Screenshot 1](sample%201.png)
-
-
 Base Library System is a web application built with Flask that allows librarians to manage books, members, and transactions in a library setting.
 
 ## Features
@@ -52,6 +49,13 @@ Contributions are welcome! If you'd like to contribute to Base Library System, p
 2. Create a new branch for your feature or bug fix.
 3. Commit your changes and push your branch to your forked repository.
 4. Submit a pull request to the main repository.
+
+## Screenshoots
+  ![Screenshot 1](sample%201.png)
+  ![Screenshot 1](sample%202.png)
+  ![Screenshot 1](members.png)
+  ![Screenshot 1](book.png)
+ 
 
 ## License
 
